@@ -1,0 +1,39 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #000000;
+  text-color: #ffffff;
+  font-family: DejaVu Sans Mono, fixed; 
+  font-size: 18pt;
+  border-width: 0;
+  outline-width: 0;
+}
+
+#flash {
+  width: 100%;
+  height: 90%;
+}
+
+#command_div {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  display: block;
+  padding-bottom: 0; 
+  background: inherit;
+  color: #888888;
+}
+
+#command {
+  width: 100%;
+  font-size: inherit;
+  background-color: #000000;
+  color: #888888;
+  padding: 1em;
+  margin: 0;
+  border: 0;
+  border-width: 0;
+  outline-width: 0;
+  clear: both;
+}
+
