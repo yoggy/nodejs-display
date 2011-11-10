@@ -8,6 +8,10 @@ function stop() {
   alert("stop()");
 }
 
+function reload() {
+  location.reload();
+}
+
 function get_command() {
   return $('#command').attr('value');
 }

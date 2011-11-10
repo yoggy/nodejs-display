@@ -29,7 +29,20 @@ io.sockets.on('connection', function(s) {
 
   s.on('command', function(data) {
     console.log("command:" + data);
-    s.broadcast.emit('command', {command: data});
+
+    var local = false;
+    var cmd = data;
+    if (cmd.substr(0,6) == "local:") {
+      cmd = cmd.substr(6);
+      local = true;
+    }
+
+    if (local == true) {
+      s.broadcast.emit('command', {command: "clear_command()"})
+    }
+    else {
+      s.broadcast.emit('command', {command: data});
+    }
     s.emit('command', {command: data});
   });
 });
