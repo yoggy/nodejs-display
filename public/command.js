@@ -1,11 +1,11 @@
-var socket;
+// socket.io connection
+var conn;
 
-function start() {
-  alert("start()");
-}
+// swf object
+var swf;
 
-function stop() {
-  alert("stop()");
+function init_swf() {
+  swf = $("#swf")[0];
 }
 
 function reload() {
@@ -25,6 +25,9 @@ function clear_command() {
 }
 
 function init() {
+  // for swf object
+  init_swf();
+
   // sockeet.io
   conn = io.connect('http://' + location.hostname + ':8080/');
 
